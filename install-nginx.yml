@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  - name: "installing nginx" 
+    dnf:
+      name: nginx
+      state: latest
+      
+      

@@ -1,0 +1,16 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  - name: "Updating Packages"
+    dnf:
+      update_cache: yes
+  - name: "removing git"
+    dnf:
+      name: git
+      state: absent
+  - name: "removing npm"
+    dnf:
+      name: npm
+      state: absent

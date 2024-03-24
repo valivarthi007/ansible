@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  - name: "Updating Packages"
+    dnf:
+      update_cache: yes
+  - name: "installing git"
+    dnf:
+      name: git
+      state: latest
+  - name: "installing python"
+    dnf:
+      name: python3
+      state: latest
+  - name: "installing npm"
+    dnf:
+      name: npm
+      state: latest
